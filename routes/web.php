@@ -39,3 +39,7 @@ Route::group(['prefix'=>'admin'],function(){
 Route::get('home',[HomeController::class,'index'])->name('home.index');
 */
 Route::get('/',[HomeController::class,'index'])->name('home');
+
+Route::get('/about',[\App\Http\Controllers\AboutController::class,'index'])->name('about');
+
+Route::get('/news',[\App\Http\Controllers\NewController::class,'index'])->name('news');
