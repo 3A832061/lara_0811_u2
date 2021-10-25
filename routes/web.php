@@ -14,7 +14,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
 
@@ -37,4 +37,5 @@ Route::group(['prefix'=>'admin'],function(){
 });
 
 Route::get('home',[HomeController::class,'index'])->name('home.index');
-
+*/
+Route::get('/',[HomeController::class,'index'])->name('home');
