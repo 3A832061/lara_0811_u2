@@ -18,9 +18,7 @@ use App\Http\Controllers\HomeController;
     return view('welcome');
 });
 
-Route::get('r1', function () {
-    return redirect('r2');
-});
+
 
 Route::get('hello/{name?}', function ($name='Everybody') {
     return 'Hello, '.$name;
@@ -42,4 +40,12 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 
 Route::get('/about',[\App\Http\Controllers\AboutController::class,'index'])->name('about');
 
-Route::get('/news',[\App\Http\Controllers\NewController::class,'index'])->name('news');
+Route::get('/news',[\App\Http\Controllers\NewsController::class,'index'])->name('news');
+
+Route::get('r1', function () {
+    return redirect('r2');
+});
+
+Route::get('r2', function () {
+    return view('welcome');
+});
